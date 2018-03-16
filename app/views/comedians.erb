@@ -1,4 +1,5 @@
 <body>
+  <h2>Average age = <%= (Comedian.all.map(&:age).sum)/(Comedian.all.count)%>
   <h3>Name, Age, Specials</h3>
   <% @comedians.each do |comedian| %>
     <%= comedian.name %>
