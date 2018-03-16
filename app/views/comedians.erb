@@ -1,7 +1,9 @@
 <body>
-  <h3>Name, Age</h3>
+  <h3>Name, Age, Specials</h3>
   <% @comedians.each do |comedian| %>
     <%= comedian.name %>
-    <%= comedian.age %><br/>
+    <%= comedian.age %>
+    <% comedian_specials = comedian.specials.map(&:name)%>
+    <%= comedian_specials %><br/>
   <% end %>
 </body>
