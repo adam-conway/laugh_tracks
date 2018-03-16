@@ -4,6 +4,7 @@
   <% @comedians.each do |comedian| %>
     <%= comedian.name %>
     <%= comedian.age %>
+    <p>Number of specials: <%= comedian.specials.count %></p>
     <% comedian_specials = comedian.specials.map(&:name)%>
     <%= comedian_specials %><br/>
   <% end %>
